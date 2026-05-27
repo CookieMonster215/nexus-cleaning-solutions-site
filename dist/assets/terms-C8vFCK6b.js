@@ -1,1 +1,0 @@
-import{b as t,s as e,r}from"./render-VimwIhdI.js";t({pageTitle:"Terms of Use | Nexus Cleaning Solutions",activePath:"/terms.html"});document.querySelector("[data-terms-date]").textContent="Effective date: "+e.legal.termsEffectiveDate;document.querySelector("[data-terms-sections]").innerHTML=r(e.legal.termsSections);
