@@ -1,0 +1,17 @@
+import { defineConfig } from "vite";
+import { resolve } from "node:path";
+
+export default defineConfig({
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "index.html"),
+        services: resolve(__dirname, "services.html"),
+        coverage: resolve(__dirname, "coverage.html"),
+        compliance: resolve(__dirname, "compliance.html"),
+        privacy: resolve(__dirname, "privacy.html"),
+        terms: resolve(__dirname, "terms.html"),
+      },
+    },
+  },
+});

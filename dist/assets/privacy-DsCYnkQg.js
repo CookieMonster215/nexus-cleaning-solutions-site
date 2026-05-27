@@ -1,0 +1,1 @@
+import{b as t,s as e,r as a}from"./render-VimwIhdI.js";t({pageTitle:"Privacy Policy | Nexus Cleaning Solutions",activePath:"/privacy.html"});document.querySelector("[data-privacy-date]").textContent="Effective date: "+e.legal.privacyEffectiveDate;document.querySelector("[data-privacy-sections]").innerHTML=a(e.legal.privacySections);
