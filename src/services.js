@@ -3,7 +3,7 @@ import { renderServiceCards, renderShell } from "./lib/render.js";
 
 renderShell({
   pageTitle: "Services | Nexus Cleaning Solutions",
-  activePath: "/services.html",
+  activePath: "services",
 });
 
 document.querySelector("[data-services-page]").innerHTML = `

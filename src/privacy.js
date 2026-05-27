@@ -3,7 +3,7 @@ import { renderLegalSections, renderShell } from "./lib/render.js";
 
 renderShell({
   pageTitle: "Privacy Policy | Nexus Cleaning Solutions",
-  activePath: "/privacy.html",
+  activePath: "privacy",
 });
 
 document.querySelector("[data-privacy-date]").textContent =

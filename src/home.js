@@ -4,7 +4,7 @@ import { renderServiceCards, renderShell } from "./lib/render.js";
 
 renderShell({
   pageTitle: "Nexus Cleaning Solutions | Trash Valet Services Across DFW",
-  activePath: "/",
+  activePath: "home",
 });
 
 document.querySelector("[data-home-hero]").innerHTML = `

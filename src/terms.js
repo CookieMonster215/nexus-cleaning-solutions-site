@@ -3,7 +3,7 @@ import { renderLegalSections, renderShell } from "./lib/render.js";
 
 renderShell({
   pageTitle: "Terms of Use | Nexus Cleaning Solutions",
-  activePath: "/terms.html",
+  activePath: "terms",
 });
 
 document.querySelector("[data-terms-date]").textContent =

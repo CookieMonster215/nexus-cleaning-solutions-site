@@ -15,7 +15,7 @@ export const siteContent = {
         "Doorstep trash pickup, make-ready support, trash-outs, and cleaning services from a DFW property support team serving communities since 2018.",
       ctas: [
         { label: "Request Service Info", href: "#inquiry" },
-        { label: "View Services", href: "/services.html" },
+        { label: "View Services", href: "./services.html" },
       ],
     },
     highlights: [

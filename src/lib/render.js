@@ -4,10 +4,10 @@ export function renderShell({ pageTitle, activePath }) {
   document.title = pageTitle;
 
   const nav = [
-    ["/", "Home"],
-    ["/services.html", "Services"],
-    ["/coverage.html", "Coverage"],
-    ["/compliance.html", "Compliance"],
+    ["home", "./", "Home"],
+    ["services", "./services.html", "Services"],
+    ["coverage", "./coverage.html", "Coverage"],
+    ["compliance", "./compliance.html", "Compliance"],
   ];
 
   const header = document.querySelector("[data-site-header]");
@@ -16,7 +16,7 @@ export function renderShell({ pageTitle, activePath }) {
   if (header) {
     header.innerHTML = `
       <div class="site-header-shell">
-        <a class="brand-lockup" href="/">
+        <a class="brand-lockup" href="./">
           <span class="brand-mark">NCS</span>
           <span class="brand-copy">
             <strong>${siteContent.business.name}</strong>
@@ -26,11 +26,12 @@ export function renderShell({ pageTitle, activePath }) {
         <nav class="site-nav" aria-label="Primary">
           ${nav
             .map(
-              ([href, label]) => `<a href="${href}" class="${activePath === href ? "is-active" : ""}">${label}</a>`,
+              ([pathKey, href, label]) =>
+                `<a href="${href}" class="${activePath === pathKey ? "is-active" : ""}">${label}</a>`,
             )
             .join("")}
         </nav>
-        <a class="header-cta" href="/#inquiry">Inquire</a>
+        <a class="header-cta" href="./index.html#inquiry">Inquire</a>
       </div>
     `;
   }
@@ -50,11 +51,11 @@ export function renderShell({ pageTitle, activePath }) {
         </div>
         <div>
           <p class="footer-label">Pages</p>
-          <p><a href="/services.html">Services</a></p>
-          <p><a href="/coverage.html">Coverage</a></p>
-          <p><a href="/compliance.html">Compliance</a></p>
-          <p><a href="/privacy.html">Privacy Policy</a></p>
-          <p><a href="/terms.html">Terms of Use</a></p>
+          <p><a href="./services.html">Services</a></p>
+          <p><a href="./coverage.html">Coverage</a></p>
+          <p><a href="./compliance.html">Compliance</a></p>
+          <p><a href="./privacy.html">Privacy Policy</a></p>
+          <p><a href="./terms.html">Terms of Use</a></p>
         </div>
       </div>
     `;

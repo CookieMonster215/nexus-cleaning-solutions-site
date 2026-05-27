@@ -3,7 +3,7 @@ import { renderShell } from "./lib/render.js";
 
 renderShell({
   pageTitle: "Compliance | Nexus Cleaning Solutions",
-  activePath: "/compliance.html",
+  activePath: "compliance",
 });
 
 document.querySelector("[data-compliance-headline]").textContent =
