@@ -11,9 +11,9 @@ document.querySelector("[data-coverage-headline]").textContent = siteContent.are
 
 document.querySelector("[data-coverage-page]").innerHTML = siteContent.area.zones
   .map(
-    (zone) => `
+    (zone, index) => `
       <article class="coverage-card">
-        <p class="eyebrow">${zone.title}</p>
+        <p class="eyebrow">Coverage 0${index + 1}</p>
         <h3>${zone.title}</h3>
         <p>${zone.cities.join(", ")}</p>
       </article>

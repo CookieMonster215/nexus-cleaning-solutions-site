@@ -7,6 +7,10 @@ renderShell({
   activePath: "home",
 });
 
+document
+  .querySelector(".hero-grid")
+  .style.setProperty("--hero-image", `url("${heroImage}")`);
+
 document.querySelector("[data-home-hero]").innerHTML = `
   <p class="eyebrow">${siteContent.business.hero.eyebrow}</p>
   <h1>${siteContent.business.hero.title}</h1>
@@ -19,15 +23,10 @@ document.querySelector("[data-home-hero]").innerHTML = `
       )
       .join("")}
   </div>
-`;
-
-document.querySelector("[data-home-panel]").innerHTML = `
-  <img class="hero-photo" src="${heroImage}" alt="Clean apartment breezeway with doorstep valet trash bins" />
-  <p class="label-chip">Property teams across DFW</p>
-  <h2>Serving the DFW metroplex since 2018.</h2>
-  <div class="stat-stack">
+  <div class="hero-proof" aria-label="Business highlights">
     ${siteContent.business.highlights
-      .map((item) => `<div class="stat-card"><strong>${item}</strong></div>`)
+      .slice(0, 3)
+      .map((item) => `<span>${item}</span>`)
       .join("")}
   </div>
 `;
@@ -65,6 +64,7 @@ document.querySelector("[data-reasons]").innerHTML = siteContent.positioning.rea
 
 document.querySelector("[data-service-list]").innerHTML = renderServiceCards(
   siteContent.serviceGroups,
+  { compact: true },
 );
 
 document.querySelector("[data-workflow]").innerHTML = siteContent.workflow
@@ -81,9 +81,9 @@ document.querySelector("[data-workflow]").innerHTML = siteContent.workflow
 
 document.querySelector("[data-coverage-preview]").innerHTML = siteContent.area.zones
   .map(
-    (zone) => `
+    (zone, index) => `
       <article class="coverage-card">
-        <p class="eyebrow">${zone.title}</p>
+        <p class="eyebrow">0${index + 1}</p>
         <h3>${zone.title}</h3>
         <p>${zone.cities.join(", ")}</p>
       </article>

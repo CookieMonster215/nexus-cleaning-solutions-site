@@ -15,9 +15,9 @@ document.querySelector("[data-compliance-close]").textContent = siteContent.comp
 document.querySelector("[data-compliance-sections]").innerHTML =
   siteContent.compliance.sections
     .map(
-      (section) => `
+      (section, index) => `
         <article class="coverage-card">
-          <p class="eyebrow">${section.title}</p>
+          <p class="eyebrow">Standard 0${index + 1}</p>
           <h3>${section.title}</h3>
           <p>${section.body}</p>
         </article>

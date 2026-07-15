@@ -62,11 +62,11 @@ export function renderShell({ pageTitle, activePath }) {
   }
 }
 
-export function renderServiceCards(groups) {
+export function renderServiceCards(groups, { compact = false } = {}) {
   const services = groups.flatMap((group) => group.services);
 
   return `
-    <section class="service-group">
+    <section class="service-group ${compact ? "is-compact" : ""}">
       <div class="service-grid">
         ${services
           .map(
@@ -74,9 +74,13 @@ export function renderServiceCards(groups) {
               <article class="service-card" id="${service.slug}">
                 <h3>${service.name}</h3>
                 <p>${service.summary}</p>
-                <ul class="mini-list">
-                  ${service.points.map((point) => `<li>${point}</li>`).join("")}
-                </ul>
+                ${
+                  compact
+                    ? '<a class="service-link" href="./services.html">View service</a>'
+                    : `<ul class="mini-list">
+                        ${service.points.map((point) => `<li>${point}</li>`).join("")}
+                      </ul>`
+                }
               </article>
             `,
           )

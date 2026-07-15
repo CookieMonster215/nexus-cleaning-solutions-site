@@ -9,13 +9,13 @@ export const siteContent = {
       inquiryEmail: "texas.ncs@gmail.com",
     },
     hero: {
-      eyebrow: "DFW multifamily support",
-      title: "Trash valet and property support services for apartments across DFW.",
+      eyebrow: "Multifamily property services | DFW",
+      title: "Cleaner communities. One accountable partner.",
       summary:
-        "Doorstep trash pickup, make-ready support, trash-outs, and cleaning services from a DFW property support team serving communities since 2018.",
+        "Valet trash, turns, cleaning, and property support for apartment communities across the Dallas-Fort Worth metroplex.",
       ctas: [
-        { label: "Request Service Info", href: "#inquiry" },
-        { label: "View Services", href: "./services.html" },
+        { label: "Request a Quote", href: "#inquiry" },
+        { label: "Explore Services", href: "./services.html" },
       ],
     },
     highlights: [
